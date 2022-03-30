@@ -1,5 +1,31 @@
 # Basic Linux Summary
 
+## Table of Content
+- [Command Line](#command-line)
+- [Command Syntax](#command-syntax)
+- [Notes](#notes)
+- [Basic Commands](#basic-commands)
+   - [ls](#ls)
+   - [cd](#cd)
+   - [grep](#grep)
+   - [sudo](#sudo)
+   - [pwd](#pwd)
+   - [passwd](#passwd)
+   - [mv](#mv)
+   - [cp](#cp)
+   - [rm](#rm)
+   - [mkdir](#mkdir)
+   - [chmod](#chmod)
+   - [chown](#chown)
+   - [cat](#cat)
+   - [echo](#echo)
+   - [wc](#wc)
+   - [man](#man)
+   - [history](#history)
+   - [touch](#touch)
+   - [apt](#apt)
+   - [top](#top)
+
 ## Command Line
 
 The Linux command line is a text interface to your computer.
@@ -37,7 +63,7 @@ During your journey with the CLI, you will often wonder "What argument do I need
 
 ## Basic Commands
 
-### 1. ls
+### ls
 
 List directory contents. If you know windows you would know that the command `dir` is used to list the contents in a directory. In Linux, the `ls` command is used to list out files and directories. Some versions may support color-coding. The names in blue represent the names of directories.
 
@@ -49,7 +75,7 @@ Example
 -rwxrwxrwx 1 user user 52143894 Dec  2 08:49 filename
 ```
 
-### 2. cd
+### cd
 
 Change the current directory. The forward slash is to be used in Linux. The example is a Linux directory that comes with all versions of Linux.
 
@@ -83,7 +109,7 @@ drwxr-x--- 1 root      adm               4096 Apr 14  2020 unattended-upgrades
 -rw-rw-r-- 1 root      utmp                 0 Apr 23  2020 wtmp
 ```
 
-### 3. grep
+### grep
 
 Find text in a file. The grep command searches through many files at a time to find a piece of text you are looking for.
 
@@ -96,7 +122,7 @@ $ grep 'progress' transaction.log
 progress
 ```
 
-### 4. sudo command
+### sudo
 
 `sudo` - if you just need to run something as a super user, you can use the sudo command. This will allow you to run the command in elevated rights and once the command is executed you will be back to your normal rights and permissions.
 
@@ -106,7 +132,7 @@ Example - `shutdown` command the shutdown command safely turns off the computer 
 `sudo shutdown -r 2` - shuts down and reboots in 2 minutes
 Using ctrl C or `shutdown -c` helps in stopping the shutdown process.
 
-### 5. pwd
+### pwd
 
 One way to identify the directory you are working in is the `pwd` command
 It displays the current working directory path and is useful when directory changes are often
@@ -118,7 +144,7 @@ Example
 /home/user
 ```
 
-### 6. passwd
+### passwd
 
 This command is used to change the user account password. You could change your password or the password of other users. Note that the normal system users may only change their own password, while root may modify the password for any account.
 
@@ -133,7 +159,7 @@ Retype new password:
 Password has been changed
 ```
 
-### 7. mv
+### mv
 
 To move a file or rename a file you would use the mv command.
 
@@ -145,13 +171,13 @@ Move file
 
 `$ mv <target_file> <destination>`
 
-### 8. cp
+### cp
 
 This command is used for copying files or directory into directory
 
 `$ cp <file_or_directory> <destination>`
 
-### 9. rm
+### rm
 
 This command is used to remove files in a directory or the directory itself. A directory cannot be removed if it is not empty.
 
@@ -159,13 +185,13 @@ This command is used to remove files in a directory or the directory itself. A d
 
 `$ rm -r <directory>` - removes all the contents in a directory and the directory as well.
 
-### 10. mkdir
+### mkdir
 
 This command is used to make a directory
 
 `$ mkdir <name>`
 
-### 11. chmod
+### chmod
 
 To change mode of a file system object. Files can have `r` - read, `w` - write and `x` - execute permissions.
 
@@ -184,7 +210,7 @@ Syntax
 | 6              | Read and Write Permissions (2+4)=6                                    | rw-                   |
 | 7              | Read, Write and Execute Permissions, Means Full Permissions (1+2+4)=7 | rwx                   |
 
-### 12. chown
+### chown
 
 This command is used to change the ownership of a file/folder or even multiple files/folders for a specified user/group.
 
@@ -196,7 +222,7 @@ Example
 
 `$ chown user1 script.sh`
 
-### 13. cat
+### cat
 
 cat command allows you to create single or multiple files, view contents of file, concatenate files and redirect output in terminal or files. The output will show the entire contents of the file(s).
 
@@ -207,7 +233,7 @@ $ cat file.txt
 This is a fluffy cat
 ```
 
-### 14. echo
+### echo
 
 This command is used to display a text or a string to the standard output or a file.
 
@@ -218,7 +244,7 @@ $ echo "This is a phrase"
 This is a phrase
 ```
 
-### 15. wc
+### wc
 
 The wc (word count) command in Linux operating system is used to find out the number of new lines, word count, byte and characters count in a file specified by the file arguments.
 
@@ -239,7 +265,7 @@ $ wc -l readme.txt
 - `wc -m` : prints the count of characters from a file.
 - `wc -L` : prints only the length of the longest line in a file.
 
-### 16. man
+### man
 
 This command is used to view the on-line reference manual pages for commands/programs.
 
@@ -278,7 +304,7 @@ Create the DIRECTORY(ies), if they do not already exist.
        --help display this help and exit
 ```
 
-### 17. history
+### history
 
 This command is used to show previously used commands or to get information about the commands executed by a user.
 
@@ -290,15 +316,15 @@ cd /home/user/Downloads
 touch text.txt
 ```
 
-### 18. touch
+### touch
 
-he `touch` command is used to update the timestamps on existing files and directories as well as to create new, empty files.
+The `touch` command is used to update the timestamps on existing files and directories as well as to create new, empty files.
 
 `$ touch text.txt`
 
 If the file already exists, touch will change the file's last access and modification times to the current time.
 
-### 19. apt
+### apt
 
 Advanced Package Tool or APT is a package management system used by Debian-based distributions.
 
@@ -309,7 +335,7 @@ There are several command-line package management tools in Debian distributions,
 `$ apt install package_name` - Install packages
 `$ apt remove package_name` - Remove packages
 
-### 20. top
+### top
 
 The `top` (table of processes) command shows a real-time view of running processes in Linux and displays kernel-managed tasks. The command also provides a system information summary that shows resource utilization, including CPU and memory usage.
 
