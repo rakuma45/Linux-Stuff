@@ -168,6 +168,7 @@ This command is used to make a directory
 To change mode of a file system object. Files can have `r` - read, `w` - write and `x` - execute permissions.
 
 Syntax
+
 `chmod mode FILE`
 
 | Octal Notation | Permission                                                            | Symbolic Presentation |
