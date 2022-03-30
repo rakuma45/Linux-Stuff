@@ -138,9 +138,11 @@ Password has been changed
 To move a file or rename a file you would use the mv command.
 
 Rename file
+
 `$ mv <target_file> <name>`
 
 Move file
+
 `$ mv <target_file> <destination>`
 
 ### 8. cp
@@ -187,9 +189,11 @@ Syntax
 This command is used to change the ownership of a file/folder or even multiple files/folders for a specified user/group.
 
 Syntax
+
 `$ chown <owner_name> <file_name>`
 
 Example
+
 `$ chown user1 script.sh`
 
 ### 13. cat
@@ -219,6 +223,7 @@ This is a phrase
 The wc (word count) command in Linux operating system is used to find out the number of new lines, word count, byte and characters count in a file specified by the file arguments.
 
 Syntax
+
 `wc [options] <filename>`
 
 Example
